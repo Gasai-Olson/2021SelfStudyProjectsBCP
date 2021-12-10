@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button1 {
+  background-color: black;
+  width: 20%;   
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+.button1:hover{
+    background-color:white;
+    color:black;
+    border:2px solid black;
+}
+</style>
+<h1>
+    <p>Add a button of your choice</p>
+</h1>
+<form>
+<label for="Version">Simple page or Advanced page:</label>
+  <select name="Version" id="Version" onchange="VersionFunc(this)">
+    <option value="blank">      </option>
+    <option value="Simple">Simple</option>
+    <option value="Advanced">Advanced</option>
+  </select>
+  <br></br>
+    <label for="Category" id="Label2" style="visibility: hidden;">Select the catagory you want to add to:</label>
+    <select name="Category" style="visibility: hidden;" id="CategorySelect" onchange="CategoryFunc(this)">
+      </select>
+</form>
+<h3>You're currently modifying the <span id = "textvar"></span> file</h3>
+<label for="nameofbutton">Name of Button</label>
+<input type="text" id="nameofbutton" name="nameofbutton"><br><br>
+<label for="mess">Message to play</label>
+<input type="text" id="mess" name="mess"><br><br>
+<label for="myfile">select image or leave blank for no image</label>
+<input type="file" id="myfile" name="myfile">
+<button onclick=ChangeButton(nameofbutton,mess,myfile)>Submit Changes</button>
+<button onclick=document.location='GabbiesMakerBoard.html'>Home</button>
+
+<script>
+    var Modification = "______";
+    document.getElementById("textvar").innerHTML = Modification;
+    function VersionFunc(input)
+    {
+    var value = input.options[input.selectedIndex].text;
+    var select = document.getElementById("CategorySelect");
+    var label = document.getElementById("Label2");
+    //original dropdown box
+    if (value == "Advanced"){
+        var CategoryList = ["","Verbs", "Colors", "People", "Responses","Directions","Body Parts","Numbers","Letters", "Animals","Descriptive"];
+    }
+    else if (value == "Simple"){
+        var CategoryList = ["","Activity Board", "Music Board", "Eating Board","Drinking Board"];// create a sub function for food and drinks
+    }
+    //hide dropdown boxes that require input
+    if (select.style.visibility === 'hidden') {
+        label.style.visibility = "visible";
+        select.style.visibility = 'visible';
+    }
+
+    //removes existing options
+    select.options.length = 0;
+    for (var i = 0; i < CategoryList.length; i++) { 
+        var opt = document.createElement('option');
+        opt.value = CategoryList[i];
+        opt.innerHTML = CategoryList[i];
+        select.appendChild(opt);
+    }
+    }
+    function CategoryFunc(input){
+        var text = input.options[input.selectedIndex].text; // returns the text ie one / two etc
+        var simple = ["Activity Board", "Music Board", "Eating Board", "Drinking Board"];
+        var adv = ["Verbs", "Colors", "People", "Responses","Directions","Body Parts","Numbers","Letters", "Animals","Descriptive"];
+        if (simple.indexOf(text) > -1){
+            if (text == "Eating Board"){
+                Modification = "Simple/Eat.html";
+            }
+            else if (text == "Drinking Board"){
+                Modification = "Simple/Drink.html"
+            }
+            else if (text == "Music Board"){
+                Modification = "Simple/Music.html";
+            }
+            else if (text == "Activity Board"){
+                Modification = "Simple/Activity.html"
+            }
+            document.getElementById("textvar").innerHTML = Modification;
+        }
+        else if (adv.indexOf(text) > -1){
+            if (text == "Verbs"){
+                Modification = "Adv/Verbs.html";
+            }
+            else if (text == "Colors"){
+                Modification = "Adv/Colors.html";
+            }
+            else if (text == "People"){
+                Modification = "Adv/People.html";
+            }
+            else if (text == "Responses"){
+                Modification = "Adv/Responses.html";
+            }
+            else if (text == "Directions"){
+                Modification = "Adv/Directions.html";
+            }
+            else if (text == "Body Parts"){
+                Modification = "Adv/BodyParts.html";
+            }
+            else if (text == "Numbers"){
+                Modification = "Adv/Numbers.html";
+            }
+            else if (text == "Letters"){
+                Modification = "Adv/Letters.html";
+            }
+            else if (text == "Animals"){
+                Modification = "Adv/Animals.html";
+            }
+            else if (text == "Descriptive"){
+                Modification = "Adv/Descriptive.html";
+            }
+            document.getElementById("textvar").innerHTML = Modification;
+            }
+        }
+    function ChangeButton(name,message,src,){
+        if (src == ""){
+            console.log("NewButton["+name.value+","+message.value+"]")
+            console.log("NewScreen["+name.value+","+document.getElementById("textvar").innerHTML)
+        }
+        else{
+            console.log("NewButton["+name.value+","+message.value+","+src.value+"]")
+            console.log("NewScreen["+name.value+","+document.getElementById("textvar").innerHTML)
+        }
+    }
+    
+</script>
+</html>
