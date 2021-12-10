@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button1 {
+  background-color: black;
+  width: 20%;   
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+.button1:hover{
+    background-color:white;
+    color:black;
+    border:2px solid black;
+}
+
+</style>
+<h1>
+    <button onclick="document.location='Home.html'" class="button1">Back</button> 
+    <script src = "libs/Process.js"></script>
+</h1>
+<body>
+
+<button onclick="add('me')" class="button1">Me</button>
+<button onclick="add('you')" class="button1">You</button>
+<button onclick="add('him')" class="button1">Him</button>
+<button onclick="add('her')" class="button1">Her</button>
+<button onclick="add('mom')" class="button1">Mom</button>
+<button onclick="add('dad')" class="button1">Dad</button>
+<button onclick="add('they')" class="button1">They</button>
+<button onclick="add('friend')" class="button1">Friend</button>
+
+<p id="demo"></p>
+
+
+
+</body>
+</html>
+

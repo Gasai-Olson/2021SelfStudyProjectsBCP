@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button1 {
+  background-color: black;
+  width: 20%;   
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+.button1:hover{
+    background-color:white;
+    color:black;
+    border:2px solid black;
+}
+
+</style>
+<h1>
+    <button onclick="document.location='Home.html'" class="button1">Back</button> 
+    <script src = "libs/Process.js"></script>
+</h1>
+<body>
+
+    <button onclick="add('up')" class="button1">Up</button>
+    <button onclick="add('down')" class="button1">Down</button>
+    <button onclick="add('left')" class="button1">Left</button>
+    <button onclick="add('right')" class="button1">Right</button>
+    <button onclick="add('forward')" class="button1">Forward</button>
+    <button onclick="add('backward')" class="button1">Backward</button>
+
+<p id="demo"></p>
+
+
+
+</body>
+</html>
+

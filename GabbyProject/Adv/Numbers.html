@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button1 {
+  background-color: black;
+  width: 18%;   
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+.button1:hover{
+    background-color:white;
+    color:black;
+    border:2px solid black;
+}
+#SpaceButton {
+    position: fixed;
+    bottom: 0px;
+    left:40%;
+  
+}
+.button2 {
+  background-color: black;
+  width: 20%;   
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+.button2:hover{
+    background-color:white;
+    color:black;
+    border:2px solid black;
+}
+</style>
+<h1>
+    <button onclick="document.location='Home.html'" class="button2">Back</button> 
+    <script src = "libs/Process.js"></script>
+</h1>
+<body>
+
+    <button onclick="addL('1')" class="button1">1</button>
+    <button onclick="addL('2')" class="button1">2</button>
+    <button onclick="addL('3')" class="button1">3</button>
+    <button onclick="addL('4')" class="button1">4</button>
+    <button onclick="addL('5')" class="button1">5</button>
+    <button onclick="addL('6')" class="button1">6</button>
+    <button onclick="addL('7')" class="button1">7</button>
+    <button onclick="addL('8')" class="button1">8</button>
+    <button onclick="addL('9')" class="button1">9</button>
+    <button onclick="addL('0')" class="button1">0</button>
+ 
+ 
+
+<p id="demo"></p>
+
+
+
+</body>
+<footer>
+    <button onclick="addL(' ')" id = "SpaceButton" class="button2">Space</button>
+</footer>
+</html>
+
