@@ -1,0 +1,150 @@
+<style>
+    * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.clearfix{
+  clear:both;
+}
+.header-banner{
+  padding-top:35px;
+  padding-bottom:100px;
+  color:#ffffff;
+  font-family:Helvetica, serif;
+  font-weight:100;
+  background-image:url("https://grapesjs.com/img/bg-gr-v.png"), url("https://grapesjs.com/img/work-desk.jpg");
+  background-attachment:scroll, scroll;
+  background-position:left top, center center;
+  background-repeat:repeat-y, no-repeat;
+  background-size:contain, cover;
+}
+.container-width{
+  width:90%;
+  max-width:1150px;
+  margin:0 auto;
+}
+.logo-container{
+  float:left;
+  width:50%;
+}
+.logo{
+  background-color:#fff;
+  border-radius:5px;
+  width:130px;
+  padding:10px;
+  min-height:30px;
+  text-align:center;
+  line-height:30px;
+  color:#4d114f;
+  font-size:23px;
+}
+.menu{
+  float:right;
+  width:50%;
+}
+.menu-item{
+  float:right;
+  font-size:15px;
+  color:#eee;
+  width:130px;
+  padding:10px;
+  min-height:50px;
+  text-align:center;
+  line-height:30px;
+  font-weight:400;
+}
+.form{
+  border-radius:3px;
+  padding:10px 15px;
+  background-color:rgba(0,0,0,0.2);
+}
+.input{
+  width:100%;
+  margin-bottom:15px;
+  padding:7px 10px;
+  border-radius:2px;
+  color:#fff;
+  background-color:#554c57;
+  border:none;
+}
+.label{
+  width:100%;
+  display:block;
+}
+.button{
+  width:100%;
+  margin:15px 0;
+  background-color:#785580;
+  border:none;
+  color:#fff;
+  border-radius:2px;
+  padding:7px 10px;
+  font-size:1em;
+  cursor:pointer;
+}
+.row{
+  display:flex;
+  justify-content:flex-start;
+  align-items:stretch;
+  flex-wrap:nowrap;
+  padding:10px;
+}
+.cell{
+  min-height:75px;
+  flex-grow:1;
+  flex-basis:100%;
+}
+#irsp{
+  padding:35px 0 400px 0;
+}
+#idfbf{
+  padding:0 0 50px 0;
+}
+@media (max-width: 768px){
+  .row{
+    flex-wrap:wrap;
+  }
+}
+
+</style>
+<header class="header-banner" id="irsp">
+    <div class="container-width" id="i05y">
+      <div class="logo-container">
+      </div>
+      <nav class="menu" id="iwy5">
+        <div id="SignupButton" onclick=document.location="signup.html" class="menu-item">Sign-up
+        </div>
+        <div id="HomeButton" onclick=document.location="home.html" class="menu-item">Home
+        </div>
+      </nav>
+      <div class="logo" id="ik41">Log-in
+      </div>
+      <div class="clearfix">
+      </div>
+    </div>
+    <div class="row" id="ifwew5">
+      <div class="cell">
+        <div class="row">
+          <div class="cell" id="idfbf">
+          </div>
+        </div>
+        <form class="form" id="i30el4">
+          <div class="form-group">
+            <label class="label" id="iv6954">Username</label>
+            <input placeholder="Type here your Username" type="text" required class="input" id="igi8bl"/>
+          </div>
+          <div class="form-group" id="i1q9uk">
+            <label class="label" id="iqixib">Password</label>
+            <input type="password" placeholder="Type here your Password" class="input" id="isxsvj"/>
+          </div>
+          <div class="form-group">
+          </div>
+          <div class="form-group" id="ibyy97">
+            <button type="submit" class="button" id="izghwt">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
