@@ -1,9 +1,0 @@
-__BEGIN__{
-    Use Notesmain.py as obj
-    x = INPUT.aftercall
-
-}
-
-__FUNCTIONS__ {
-    note : obj.take_note(x);
-}
